@@ -1,0 +1,1668 @@
+
+/* ==========================================
+   T.U.C.A. - CAMINHO DE ARUANDA
+   ESTILO COMPLETO
+========================================== */
+
+:root {
+    --blue: #4da6ff;
+    --navy: #283E58;
+    --white: #ffffff;
+    --pale: #f5faff;
+    --text: #52677e;
+    --border: #dceafa;
+    --dark-text: #283E58;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark-text);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    color: var(--blue);
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    line-height: 1.25;
+    margin: 10px 0 15px;
+}
+
+.section-heading p {
+    font-size: 1rem;
+}
+
+.section-label {
+    display: inline-block;
+    color: var(--blue);
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-intro {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--white);
+    box-shadow: 0 3px 15px rgba(40, 62, 88, 0.12);
+}
+
+.header-content {
+    min-height: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.logo span {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo strong {
+    color: var(--navy);
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+.logo small {
+    color: var(--text);
+    font-size: 0.68rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav a {
+    color: var(--navy);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: var(--blue);
+}
+
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--navy);
+    margin: 6px auto;
+    transition: 0.3s;
+}
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.btn {
+    display: inline-block;
+    padding: 13px 27px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    color: var(--navy);
+    background: var(--blue);
+}
+
+.btn-primary:hover {
+    background: var(--white);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    color: var(--white);
+    border: 1px solid var(--blue);
+}
+
+.btn-outline:hover {
+    color: var(--navy);
+    background: var(--blue);
+}
+
+/* ==========================================
+   HERO - ESCURO
+========================================== */
+
+.hero {
+    min-height: 620px;
+    background: var(--navy);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 90px 0;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-logo {
+    width: 145px;
+    height: 145px;
+    object-fit: contain;
+    margin-bottom: 22px;
+}
+
+.hero-subtitle {
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    max-width: 850px;
+    font-size: clamp(2rem, 5vw, 3.7rem);
+    line-height: 1.2;
+    color: var(--white);
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--blue);
+}
+
+.hero-description {
+    max-width: 680px;
+    margin: 25px auto 30px;
+    color: #e4edf7;
+    font-size: 1.05rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.scroll-indicator {
+    margin-top: 55px;
+    width: 25px;
+    height: 40px;
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 7px;
+}
+
+.scroll-indicator span {
+    width: 4px;
+    height: 8px;
+    border-radius: 5px;
+    background: var(--blue);
+}
+
+/* ==========================================
+   SOBRE - CLARO
+========================================== */
+
+.sobre {
+    background: var(--white);
+    color: var(--navy);
+}
+
+.sobre-content {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.sobre-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--pale);
+    border-radius: 20px;
+    padding: 40px;
+    min-height: 320px;
+}
+
+.sobre-image img {
+    width: 100%;
+    max-width: 300px;
+    object-fit: contain;
+}
+
+.sobre-text h2 {
+    color: var(--blue);
+    font-size: 2.2rem;
+    line-height: 1.25;
+    margin: 10px 0 20px;
+}
+
+.sobre-text p {
+    color: var(--text);
+    margin-bottom: 15px;
+}
+
+.text-link {
+    display: inline-block;
+    color: #287fc9;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   MISSÃO - ESCURO
+========================================== */
+
+.missao {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.missao .section-heading h2 {
+    color: var(--blue);
+}
+
+.missao .section-intro {
+    color: #e4edf7;
+}
+
+.missao-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.missao-card {
+    background: var(--white);
+    color: var(--navy);
+    border-radius: 15px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.missao-card:hover {
+    transform: translateY(-6px);
+}
+
+.card-symbol {
+    font-size: 2.2rem;
+    color: var(--blue);
+    margin-bottom: 12px;
+}
+
+.missao-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.missao-card p {
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   CONHEÇA A UMBANDA - CLARO
+========================================== */
+
+.conheca {
+    background: var(--white);
+    color: var(--navy);
+}
+
+.conheca .section-heading p {
+    color: var(--text);
+}
+
+.conheca-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.conheca-card {
+    background: var(--pale);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.conheca-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--blue);
+}
+
+.article-number {
+    color: var(--blue);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.conheca-card h3 {
+    color: var(--navy);
+    font-size: 1.25rem;
+    margin: 12px 0;
+}
+
+.conheca-card > p {
+    color: var(--text);
+    font-size: 0.94rem;
+}
+
+.article-details {
+    margin-top: 18px;
+    border-top: 1px solid var(--border);
+    padding-top: 13px;
+}
+
+.article-details summary,
+.linha-card summary {
+    color: #287fc9;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.details-content {
+    padding-top: 15px;
+}
+
+.details-content p {
+    color: var(--text);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.knowledge-note {
+    max-width: 850px;
+    margin: 30px auto 0;
+    text-align: center;
+    color: var(--text);
+    font-size: 0.88rem;
+}
+
+/* ==========================================
+   COMO FUNCIONA UMA GIRA - ESCURO
+========================================== */
+
+.gira {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.gira-content {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.gira-text h2 {
+    color: var(--blue);
+    font-size: 2.2rem;
+    line-height: 1.25;
+    margin: 10px 0 20px;
+}
+
+.gira-text p {
+    color: #e4edf7;
+    margin-bottom: 15px;
+}
+
+.gira-highlight {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(77,166,255,0.45);
+    border-radius: 18px;
+    padding: 35px;
+}
+
+.highlight-symbol {
+    display: block;
+    font-size: 2.5rem;
+    color: var(--blue);
+    margin-bottom: 15px;
+}
+
+.gira-highlight h3 {
+    color: var(--blue);
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.gira-highlight p {
+    color: #e4edf7;
+}
+
+/* ==========================================
+   AGENDA - CLARO
+========================================== */
+
+.portfolio {
+    background: var(--white);
+    color: var(--navy);
+}
+
+.portfolio .section-heading p {
+    color: var(--text);
+}
+
+.agenda-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.agenda-card {
+    display: flex;
+    gap: 20px;
+    padding: 28px;
+    background: var(--pale);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--blue);
+    border-radius: 12px;
+}
+
+.agenda-date {
+    min-width: 65px;
+    text-align: center;
+    color: var(--navy);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.agenda-date strong {
+    display: block;
+    color: #287fc9;
+    font-size: 2rem;
+}
+
+.agenda-date span {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.agenda-info h3 {
+    color: var(--navy);
+    font-size: 1.15rem;
+    margin-bottom: 5px;
+}
+
+.agenda-info p {
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+.agenda-empty {
+    grid-column: 1 / -1;
+    background: var(--pale);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    color: var(--text);
+}
+
+.agenda-note {
+    text-align: center;
+    color: #718096;
+    font-size: 0.85rem;
+    margin-top: 25px;
+}
+
+.center-button {
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* ==========================================
+   PRIMEIRA VISITA - ESCURO
+========================================== */
+
+.primeira-visita {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.primeira-content {
+    display: flex;
+    justify-content: center;
+}
+
+.primeira-text {
+    max-width: 800px;
+}
+
+.primeira-text h2 {
+    color: var(--blue);
+    font-size: 2.2rem;
+    line-height: 1.25;
+    margin: 10px 0 20px;
+}
+
+.primeira-text p {
+    color: #e4edf7;
+    margin-bottom: 15px;
+}
+
+.primeira-text ul {
+    list-style: none;
+    margin: 25px 0 30px;
+}
+
+.primeira-text li {
+    color: var(--white);
+    margin-bottom: 12px;
+    padding-left: 28px;
+    position: relative;
+}
+
+.primeira-text li::before {
+    content: "✓";
+    color: var(--blue);
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+}
+
+/* ==========================================
+   LINHAS DE TRABALHO - CLARO
+========================================== */
+
+.servicos {
+    background: var(--white);
+    color: var(--navy);
+}
+
+.servicos .section-heading p {
+    color: var(--text);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.linha-card {
+    background: var(--pale);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 27px;
+    transition: 0.3s;
+}
+
+.linha-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--blue);
+    box-shadow: 0 8px 22px rgba(40,62,88,0.08);
+}
+
+.linha-card h3 {
+    color: var(--navy);
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.linha-card > p {
+    color: var(--text);
+    font-size: 0.93rem;
+}
+
+.linha-card details {
+    border-top: 1px solid var(--border);
+    margin-top: 17px;
+    padding-top: 13px;
+}
+
+.linha-card details p {
+    color: var(--text);
+    font-size: 0.9rem;
+    margin-top: 12px;
+}
+
+.section-note {
+    text-align: center;
+    color: #718096;
+    font-size: 0.85rem;
+    margin-top: 30px;
+}
+
+/* ==========================================
+   CAMPANHAS - ESCURO
+========================================== */
+
+.campanhas {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.campanhas .section-heading h2 {
+    color: var(--blue);
+}
+
+.campanhas .section-intro {
+    color: #e4edf7;
+}
+
+.campanha-content {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px;
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(77,166,255,0.4);
+    border-radius: 16px;
+}
+
+.campanha-icon {
+    color: var(--blue);
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.campanha-content h3 {
+    color: var(--blue);
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.campanha-content p {
+    color: #e4edf7;
+    margin-bottom: 12px;
+}
+
+.campanha-content .text-link {
+    color: var(--blue);
+}
+
+/* ==========================================
+   PERGUNTAS FREQUENTES - CLARO
+========================================== */
+
+.faq {
+    background: var(--white);
+    color: var(--navy);
+}
+
+.faq .section-heading p {
+    color: var(--text);
+}
+
+.faq-list {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--pale);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 13px;
+    padding: 18px 22px;
+}
+
+.faq-item summary {
+    color: var(--navy);
+    font-weight: 700;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+.faq-item summary::marker {
+    color: #287fc9;
+}
+
+.faq-item p {
+    color: var(--text);
+    padding-top: 14px;
+    font-size: 0.94rem;
+}
+
+/* ==========================================
+   GALERIA - ESCURO
+========================================== */
+
+.galeria {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.galeria .section-heading h2 {
+    color: var(--blue);
+}
+
+.galeria .section-intro {
+    color: #e4edf7;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.galeria-item {
+    height: 260px;
+    overflow: hidden;
+    border: 5px solid var(--white);
+    border-radius: 14px;
+    padding: 0;
+    background: var(--white);
+    cursor: pointer;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.06);
+}
+
+.galeria-note {
+    text-align: center;
+    color: #e4edf7;
+    margin-top: 25px;
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   LOCALIZAÇÃO - CLARO
+========================================== */
+
+.localizacao {
+    background: var(--white);
+    color: var(--navy);
+}
+
+.localizacao .section-heading p {
+    color: var(--text);
+}
+
+.localizacao-content {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 35px;
+    align-items: stretch;
+}
+
+.localizacao-info {
+    padding: 30px;
+    background: var(--pale);
+    border-radius: 14px;
+    border: 1px solid var(--border);
+}
+
+.localizacao-info h3 {
+    color: var(--navy);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.localizacao-info p {
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+.localizacao-info strong {
+    color: var(--navy);
+}
+
+.map-container {
+    min-height: 350px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    border: 0;
+}
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
+.footer {
+    background: var(--pale);
+    color: var(--navy);
+    padding-top: 65px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 0.7fr;
+    gap: 45px;
+    padding-bottom: 45px;
+}
+
+.footer-brand img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.footer-brand h2 {
+    font-size: 1.5rem;
+    color: var(--navy);
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.footer-brand span {
+    color: #287fc9;
+    font-size: 0.85rem;
+}
+
+.footer h3 {
+    color: var(--navy);
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+}
+
+.footer-info p {
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+    color: var(--text);
+    overflow-wrap: anywhere;
+}
+
+.footer-info strong {
+    color: var(--navy);
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-social a {
+    color: #287fc9;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.footer-social a:hover {
+    color: var(--navy);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border);
+    padding: 20px 0;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #718096;
+    font-size: 0.8rem;
+}
+
+.legal-links {
+    display: flex;
+    gap: 18px;
+}
+
+.legal-links a {
+    color: #287fc9;
+    font-size: 0.8rem;
+}
+
+.legal-links a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   WHATSAPP FLUTUANTE
+========================================== */
+
+.whatsapp-float {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 19px;
+    border-radius: 35px;
+    background: var(--blue);
+    color: var(--navy);
+    font-weight: 700;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    background: var(--white);
+    transform: translateY(-4px);
+}
+
+.whatsapp-float strong {
+    font-size: 1.2rem;
+}
+
+/* ==========================================
+   LIGHTBOX DA GALERIA
+========================================== */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(0,0,0,0.92);
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: transparent;
+    color: white;
+    border: 0;
+    font-size: 3rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* ==========================================
+   RESPONSIVIDADE - TABLETS
+========================================== */
+
+@media (max-width: 950px) {
+
+    .nav {
+        gap: 13px;
+    }
+
+    .nav a {
+        font-size: 0.82rem;
+    }
+
+    .sobre-content {
+        gap: 35px;
+    }
+
+    .portfolio-grid,
+    .conheca-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ==========================================
+   RESPONSIVIDADE - CELULARES
+========================================== */
+
+@media (max-width: 700px) {
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .header-content {
+        min-height: 72px;
+    }
+
+    .logo img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .logo strong {
+        font-size: 1.1rem;
+    }
+
+    .logo small {
+        font-size: 0.58rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        flex-shrink: 0;
+    }
+
+    .nav {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 5% 18px;
+        box-shadow: 0 8px 15px rgba(40,62,88,0.12);
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        padding: 13px 5px;
+        border-bottom: 1px solid #e7f1fb;
+        font-size: 0.95rem;
+    }
+
+    .hero {
+        min-height: 560px;
+        padding: 75px 0;
+    }
+
+    .hero-logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 270px;
+    }
+
+    .section-heading h2,
+    .sobre-text h2,
+    .gira-text h2,
+    .primeira-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .sobre-content,
+    .gira-content,
+    .localizacao-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .sobre-image {
+        min-height: 230px;
+        padding: 25px;
+    }
+
+    .sobre-image img {
+        max-width: 220px;
+    }
+
+    .missao-grid,
+    .conheca-grid,
+    .portfolio-grid,
+    .agenda-grid,
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .agenda-card {
+        padding: 22px;
+    }
+
+    .campanha-content {
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .galeria-item {
+        height: 240px;
+    }
+
+    .map-container,
+    .map-container iframe {
+        min-height: 300px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .legal-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .whatsapp-float {
+        right: 15px;
+        bottom: 15px;
+        padding: 12px 16px;
+    }
+}
+
+/* ==========================================
+   TELAS MUITO PEQUENAS
+========================================== */
+
+@media (max-width: 380px) {
+
+    .logo small {
+        max-width: 190px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.72rem;
+    }
+
+    .container {
+        width: 92%;
+    }
+}
+
+/* ACESSIBILIDADE: REDUZIR ANIMAÇÕES */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+
+
+/* ================================
+   PÁGINAS LEGAIS
+================================ */
+
+.page-hero {
+    background: #283E58;
+    color: #ffffff;
+    padding: 90px 20px 75px;
+    text-align: center;
+}
+
+.page-hero .section-tag {
+    color: #4da6ff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.8rem;
+}
+
+.page-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    margin: 15px 0;
+}
+
+.page-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #e1ebf5;
+    line-height: 1.7;
+}
+
+.legal-section {
+    background: #f5faff;
+    padding: 70px 20px;
+}
+
+.legal-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(40, 62, 88, 0.06);
+}
+
+.legal-updated {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 35px;
+}
+
+.legal-content h2 {
+    color: #283E58;
+    font-size: 1.3rem;
+    margin-top: 35px;
+    margin-bottom: 12px;
+}
+
+.legal-content p,
+.legal-content li {
+    color: #4b5563;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.legal-content ul {
+    padding-left: 25px;
+    margin: 15px 0;
+}
+
+.legal-content li {
+    margin-bottom: 8px;
+}
+
+.legal-contact {
+    background: #f5faff;
+    border-left: 4px solid #4da6ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.legal-contact p {
+    margin: 8px 0;
+}
+
+.legal-back {
+    display: inline-block;
+    margin-top: 35px;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .page-hero {
+        padding: 65px 20px 55px;
+    }
+
+    .legal-section {
+        padding: 35px 15px;
+    }
+
+    .legal-content {
+        padding: 25px 20px;
+    }
+
+    .legal-content h2 {
+        font-size: 1.15rem;
+    }
+}
+
+/* ==========================================
+   COMPATIBILIDADE COM AS PAGINAS LEGAIS
+   Termos de Uso e Politica de Privacidade
+========================================== */
+
+/* A pagina legal usa logo-area; o site principal usa .logo.
+   Estas regras mantem os dois formatos funcionando. */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.logo-area img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.logo-area div {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-area strong {
+    color: var(--navy);
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+.logo-area span {
+    color: var(--text);
+    font-size: 0.68rem;
+}
+
+/* A pagina legal usa section-tag; o site principal usa section-label. */
+.section-tag {
+    display: inline-block;
+    color: var(--blue);
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Hero das paginas legais */
+.page-hero {
+    background: var(--navy);
+    color: var(--white);
+    padding: 90px 20px 75px;
+    text-align: center;
+}
+
+.page-hero .section-tag {
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+
+.page-hero h1 {
+    color: var(--white);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.page-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #e4edf7;
+    line-height: 1.7;
+}
+
+/* Conteudo legal */
+.legal-section {
+    background: var(--pale);
+    padding: 70px 20px;
+}
+
+.legal-content {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 45px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(40, 62, 88, 0.06);
+}
+
+.legal-updated {
+    color: #718096;
+    font-size: 0.88rem;
+    margin-bottom: 30px;
+}
+
+.legal-content h2 {
+    color: var(--navy);
+    font-size: 1.25rem;
+    line-height: 1.35;
+    margin: 32px 0 12px;
+}
+
+.legal-content h2:first-of-type {
+    margin-top: 18px;
+}
+
+.legal-content p,
+.legal-content li {
+    color: var(--text);
+    font-size: 0.96rem;
+    line-height: 1.85;
+}
+
+.legal-content p {
+    margin-bottom: 13px;
+}
+
+.legal-content ul {
+    padding-left: 25px;
+    margin: 14px 0 20px;
+}
+
+.legal-content li {
+    margin-bottom: 8px;
+}
+
+.legal-contact {
+    background: var(--pale);
+    border-left: 4px solid var(--blue);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.legal-contact p {
+    margin: 7px 0;
+    overflow-wrap: anywhere;
+}
+
+.legal-back {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 13px 27px;
+    border-radius: 30px;
+    background: var(--blue);
+    color: var(--navy);
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.legal-back:hover {
+    background: var(--navy);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Links usados no rodape das paginas legais */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: #287fc9;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--navy);
+    text-decoration: underline;
+}
+
+.footer-copy {
+    color: #718096;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* Ajustes responsivos especificos das paginas legais */
+@media (max-width: 700px) {
+    .logo-area img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .logo-area strong {
+        font-size: 1.1rem;
+    }
+
+    .logo-area span {
+        font-size: 0.58rem;
+    }
+
+    .page-hero {
+        padding: 65px 20px 55px;
+    }
+
+    .legal-section {
+        padding: 35px 15px;
+    }
+
+    .legal-content {
+        width: 100%;
+        padding: 25px 20px;
+    }
+
+    .legal-content h2 {
+        font-size: 1.12rem;
+    }
+
+    .legal-content p,
+    .legal-content li {
+        font-size: 0.92rem;
+    }
+
+    .footer-links {
+        gap: 10px;
+    }
+
+    .footer-copy {
+        text-align: left;
+    }
+}
+
+@media (max-width: 380px) {
+    .logo-area span {
+        max-width: 190px;
+    }
+
+    .legal-content {
+        padding: 22px 16px;
+    }
+}
